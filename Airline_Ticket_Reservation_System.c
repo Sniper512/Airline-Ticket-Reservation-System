@@ -114,6 +114,7 @@ int main()
             flag = 0;
             break;
         default:
+        printf("Wrong Input.\n");
             break;
         }
     }
