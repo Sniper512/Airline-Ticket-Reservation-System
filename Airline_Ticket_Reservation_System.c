@@ -61,7 +61,7 @@ void EconomyClass(int seats[], int size)
 }
 void Ticket(int seats[], int size)
 {
-    printf("Select Type of Class:(1 for First Class and 2 for Economy Class).\n");
+    printf("Select Type of Class:(1 for First Class and 2 for Economy Class).");
     int class = 0;
     scanf("%d", &class);
     if (class == 1)
