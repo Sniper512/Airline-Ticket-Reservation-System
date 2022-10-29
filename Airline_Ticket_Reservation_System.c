@@ -10,6 +10,7 @@ void FirstClass(int seats[], int size)
     }
     else
     {
+        num--;
         seats[num] = 1;
     }
 }
@@ -24,6 +25,7 @@ void EconomyClass(int seats[], int size)
     }
     else
     {
+        num--;
         seats[num] = 1;
     }
 }
@@ -49,7 +51,11 @@ void Display(int seats[],int size)
 {
     for(int i=0;i<size;i++)
     {
-        printf("%d ",seats[i]);
+        if(i%10==0)
+        {
+            printf("\n");
+        }
+      printf("%d ",seats[i]);   
     }
 }
 int main()
@@ -57,10 +63,10 @@ int main()
     int seats[100] = {0};
     int flag = 1;
     int input = 0;
-    printf("\n***************Welcome to Airline Ticket Reservation System.******************\n\n");
+    printf("\n***************Welcome to Airline Ticket Reservation System.******************\n");
     while (flag)
     {
-        printf("1)-Book a Ticket.\n");
+        printf("\n1)-Book a Ticket.\n");
         printf("2)-Print Ticket's Availibility Chart.\n");
         printf("3)-Exit\n");
         printf("Choose from above: ");
@@ -70,7 +76,9 @@ int main()
         case 1:
             Ticket(seats, 100);
             break;
-        
+        case 2:
+        Display(seats,100);
+        break;
         default:
             break;
         }
