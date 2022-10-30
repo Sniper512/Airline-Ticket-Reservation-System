@@ -12,7 +12,7 @@ void printTicket(int seat)
     {
         printf("Economy Class.\n");
     }
-    printf("------------------------------------------\n");
+    printf("------------------------------------------");
 }
 void FirstClass(int seats[], int size)
 {
@@ -61,7 +61,8 @@ void EconomyClass(int seats[], int size)
 }
 void Ticket(int seats[], int size)
 {
-    printf("Select Type of Class:(1 for First Class and 2 for Economy Class).");
+    printf("Type 1 for First Class and 2 for Economy Class.\n");
+    printf("Select Type of Class: ");
     int class = 0;
     scanf("%d", &class);
     if (class == 1)
@@ -96,7 +97,7 @@ int main()
     printf("\n***************  Welcome to Airline Ticket Reservation System.  ******************\n");
     while (flag)
     {
-        printf("\n-----------------------------------------");
+        printf("\n------------------------------------------");
         printf("\n1)-Book a Ticket.\n");
         printf("2)-Print Ticket's Availibility Chart.\n");
         printf("3)-Exit\n");
@@ -111,6 +112,7 @@ int main()
             Display(seats, 100);
             break;
         case 3:
+        printf("Program Successfully Ended.");
             flag = 0;
             break;
         default:
